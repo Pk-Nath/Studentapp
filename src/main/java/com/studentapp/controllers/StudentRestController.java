@@ -42,7 +42,9 @@ public class StudentRestController {
 		studService.deleteOneStudentById(id);
 	}
 	
-	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
+	//microservice implemetation -1
+	//following section impose data on searchstudent project
+	@RequestMapping(value = "api/get/{id}", method = RequestMethod.GET)
 	public Student getOnestudent(@PathVariable("id") long id) {
 		Student stud=studService.findOneStudent(id);
 		return stud;
